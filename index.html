@@ -12,7 +12,7 @@
   <body>
     <section class="page-header">
       <h1 class="project-name">Location-based-cookie-consent</h1>
-      <h2 class="project-tagline">To comply with the UK Cookie Law - This script will show a cookie consent form specifically to users inside the EU via their IP address </h2>
+      <h2 class="project-tagline">To comply with the UK Cookie Law - This script will show a cookie consent popup specifically to users inside the EU.</h2>
       <a href="https://github.com/Verpz/Location-Based-Cookie-Consent" class="btn">View on GitHub</a>
       <a href="https://github.com/Verpz/Location-Based-Cookie-Consent/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/Verpz/Location-Based-Cookie-Consent/tarball/master" class="btn">Download .tar.gz</a>
@@ -22,7 +22,43 @@
       <h1>
 <a id="location-based-cookie-consent" class="anchor" href="#location-based-cookie-consent" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Location-Based-Cookie-Consent</h1>
 
-<p>To comply with the UK Cookie Law - This script will show a cookie consent popup specifically to users inside the EU via their IP address.</p>
+<p><a href="http://verpz.github.io/Location-Based-Cookie-Consent">Website</a></p>
+
+<p>To comply with the European <a href="https://www.cookielaw.org/the-cookie-law/">Cookie Law</a> - This script will show a cookie consent popup specifically to users inside Europe. This prevents those annoying messages everytime you visit a website when you are out of the required area. It does this by fetching the user's IP address and then sending it to an API, to get the user's country.</p>
+
+<p>TO-DO: Set cookie to prevent the popup from showing multiple times.</p>
+
+<p>Requirements:</p>
+
+<ul>
+<li>A brain in your PCI-E slot.</li>
+<li>PHP</li>
+</ul>
+
+<p>Uses a CDN for CSS.
+This script does not require javascript.</p>
+
+<p>To install:</p>
+
+<ol>
+<li>Add "cookie.php" to your project folder.</li>
+<li>Put the following code at the bottom of your page: 
+<code>
+&lt;?php
+require("cookie.php");
+?&gt;
+</code>
+</li>
+<li>Edit cookie.php to edit the popup text and to add your privacy policy link.</li>
+</ol>
+
+<p>If you wish to not use the CDN, simply download cookie.css, add it to your project folder, then update cookie.php.</p>
+
+<p><strong>Disclaimer:</strong> This script aims to comply with the Cookie Law as best as possible, but I am not responsable for any legal issues that arise from using this script.</p>
+
+<p><img src="https://i.imgur.com/0zDnKAs.png" alt="Popup"></p>
+
+<p>Credit to Chris Wiegman for the GETIP() Function.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/Verpz/Location-Based-Cookie-Consent">Location-based-cookie-consent</a> is maintained by <a href="https://github.com/Verpz">Verpz</a>.</span>
