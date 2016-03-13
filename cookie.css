@@ -1,1 +1,55 @@
 /* Made by Verpz https://github.com/Verpz/ Licensed Under Apache License 2.0 Details On GitHub */
+.cookie {
+  background: #EEE;
+  color: #555;
+  display: block;
+  width: 20%;
+  height: 15%;
+  right: 0;
+  left: 0;
+  bottom: 5%;
+  margin-left: 75%;
+  border-radius: 10px;
+  box-shadow: 0 10px 70px;
+  text-align: center;
+  position: fixed;
+  font-family: sans-serif, serif;
+  font-weight: 300;
+  z-index: 9999;
+}
+.cookie h1 {
+  font-family: sans-serif, serif;
+  font-weight: 300;
+  padding: 10px 10px 0 10px;
+}
+.cookie p {
+  padding: 0 10px 10px 10px;
+  margin-bottom: 2.5%;
+}
+.cookie a {
+  color: #355980;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+.cookie a:hover {
+  color: #000;
+}
+#cookie-hide:checked ~ #cookie-exit {
+  display: none;
+}
+#cookie-hide {
+  position: fixed;
+  left: 100%;
+}
+#cookie-exit {
+  padding: 1em;
+  overflow: auto;
+}
+#cookie-exit label {
+  background: #355980;
+  color: white;
+  padding: 1.5% 3%;
+  cursor: pointer;
+  border-radius: 3px;
+  float: right;
+}
