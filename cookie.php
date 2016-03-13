@@ -22,14 +22,12 @@ function GetIP()
 	}
 
 $address = GetIP();
+$html = '<div><link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Verpz/Location-Based-Cookie-Consent/master/cookie.css"><input type="checkbox" id="cookie-hide" /><div class="cookie" id="cookie-exit"><p>This website uses cookies to improve your experience. To find out more, click<a href="#" target="_blank"> here</a></p><label for="cookie-hide">Close</label></div></div>';
 $xml = simplexml_load_file("https://ip-json.rhcloud.com/xml/$address");
 $country = $xml->country_name;
 $EU = array("Austria", "Belgium", "Bulgaria", "Croatia", "Republic of Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden", "United Kingdom");
-
 if (in_array($country, $EU)) {
-  echo "Currently In $country";
+  echo $html;
 } else {
-  echo "Not in Europe";
 }
-
 ?>
