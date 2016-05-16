@@ -13,7 +13,7 @@ Requirements:
   * Javascript enabled client-side for it to stay hided for the browsing session.
 
 Uses a CDN for CSS.
-This script does not require javascript to close the popup its self.
+This script does not require javascript for the user to close the popup.
 
 To install:
   
@@ -31,5 +31,7 @@ If you wish to not use the CDN, simply download cookie.css, add it to your proje
 **Disclaimer:** This script aims to comply with the Cookie Law as best as possible, however I am not responsable for any legal issues that arise from using this script. I am not associated with the API, please read their privacy policy before the use of this script. [IP-JSON] (https://ip-json.rhcloud.com)
 
 Credit to Chris Wiegman for the GETIP() Function.
+
+The popup is displayed in the bottom corner out of the way.
 
 ![Popup](https://i.imgur.com/0zDnKAs.png)
