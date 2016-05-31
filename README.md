@@ -2,7 +2,7 @@
 
 [Website] (http://verpz.github.io/Location-Based-Cookie-Consent)
 
-To comply with the European [Cookie Law](https://www.cookielaw.org/the-cookie-law/) - This script will show a cookie consent popup specifically to users inside Europe. This prevents those annoying messages every time you visit a website when you are out of the required area. It does this by fetching the user's IP address and then sending it out to an API to get the user's country.
+To comply with the European [Cookie Law](https://www.cookielaw.org/the-cookie-law/) - This script will show a cookie consent popup specifically to users inside Europe. This prevents those annoying messages every time you visit a website when you are out of the EU. It does this by fetching the user's IP address and then sending it out to an API to get the user's country.
 
 Requirements:
 
