@@ -1,5 +1,16 @@
 <?php
 /* Made by Verpz https://github.com/Verpz/ Licensed Under MIT License Details On GitHub */
+
+// Visit ipinfodb.com to register an API key. Instruction on Github https://github.com/Verpz/Location-Based-Cookie-Consent
+
+$apikey = '569c3218d1debbac17a18450ffe2c4cc6e4455d9bda45261ed001a38588b75c7';
+// Message shown on popup
+$message = 'This website uses cookies to improve your experience.';
+// By default after the $message "To find out more, click here" is shown
+// URL used on popup
+$url = "#";
+
+
 function GetIP()
  {
 		//GetIP function by Chris Wiegman
@@ -22,12 +33,15 @@ function GetIP()
 	}
 
 $address = GetIP();
-$html = '<div id="cookie-consent"><link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Verpz/Location-Based-Cookie-Consent/master/cookie.css"><input onclick="setCookieConsent()" type="checkbox" id="cookie-hide" /><div class="cookie" id="cookie-exit"><p>This website uses cookies to improve your experience. To find out more, click<a href="#" target="_blank"> here</a></p><label for="cookie-hide">Close</label></div><script src="https://cdn.rawgit.com/Verpz/Location-Based-Cookie-Consent/master/cookie-js.js"></script></div>';
-$xml = simplexml_load_file("https://ip-json.rhcloud.com/xml/$address");
-$country = $xml->country_name;
+$html = '<div id="cookie-consent"><link rel="stylesheet" type="text/css" href="cookie.css"><input onclick="setCookieConsent()" type="checkbox" id="cookie-hide" /><div class="cookie" id="cookie-exit"><p>' . $message . 'To find out more, click<a href="' . $url . '" target="_blank"> here</a></p><label for="cookie-hide">Close</label></div><script src="https://cdn.rawgit.com/Verpz/Location-Based-Cookie-Consent/master/cookie-js.js"></script></div>';
+$xml = simplexml_load_file("https://api.ipinfodb.com/v3/ip-country/?key=$apikey&format=xml&ip=$address");
+$country = $xml->countryName;
+// Add or remove countries below
 $EU = array("Austria", "Belgium", "Bulgaria", "Croatia", "Republic of Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden", "United Kingdom");
 if (in_array($country, $EU)) {
+  // Is inside the EU
   echo $html;
 } else {
+  // Is outside the EU
 }
 ?>
