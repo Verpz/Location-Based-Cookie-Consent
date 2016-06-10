@@ -3,7 +3,7 @@
 
 // Visit ipinfodb.com to register an API key. Instruction on Github https://github.com/Verpz/Location-Based-Cookie-Consent
 
-$apikey = '569c3218d1debbac17a18450ffe2c4cc6e4455d9bda45261ed001a38588b75c7';
+$apikey = '#';
 // Message shown on popup
 $message = 'This website uses cookies to improve your experience.';
 // By default after the $message "To find out more, click here" is shown
