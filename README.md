@@ -8,7 +8,7 @@ Requirements:
 
   * A brain in your PCI-E slot.
   * PHP
-  * Javascript enabled client-side for the pop-up to stay hid once dismissed for the browsing session.
+  * Javascript enabled client-side for the pop-up to stay hidden once dismissed for the browsing session.
 
 Uses a CDN for CSS and Javascript.
 This script does not require javascript for the user to close the popup.
